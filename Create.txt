@@ -1,0 +1,166 @@
+SQL*Plus: Release 11.2.0.2.0 Production on Sat Dec 28 19:41:28 2024
+
+Copyright (c) 1982, 2014, Oracle.  All rights reserved.
+
+SQL> connect system
+Enter password:
+Connected.
+SQL> CREATE USER Aryan_Tamrakar IDENTIFIED BY 23050394;
+
+User created.
+
+SQL> GRANT CONNECT, RESOURCE TO Aryan_Tamrakar;
+
+Grant succeeded.
+
+SQL> CONNECT Aryan_Tamrakar
+Enter password:
+Connected.
+SQL>
+
+SQL> CREATE TABLE Program (
+  2  Program_id NUMBER(10) PRIMARY KEY,
+  3  ProgramName VARCHAR(40) NOT NULL,
+  4  ProgramDescription VARCHAR(100) NOT NULL,
+  5  ProgramDuration NUMBER(3) NOT NULL,
+  6  Program_Year NUMBER(4) NOT NULL
+  7  );
+
+Table created.
+
+SQL> CREATE TABLE Student (
+  2  Student_id NUMBER(10) PRIMARY KEY,
+  3  Program_id NUMBER(10),
+  4  Student_Name VARCHAR(60) NOT NULL,
+  5  Student_Number NUMBER(10) UNIQUE,
+  6  Student_Email VARCHAR(50) UNIQUE,
+  7  Date_of_Birth DATE NOT NULL,
+  8  FOREIGN KEY (Program_id) REFERENCES Program(Program_id)
+  9  );
+
+Table created.
+
+SQL> CREATE TABLE Module (
+  2  Module_id NUMBER(10) PRIMARY KEY,
+  3  ModuleName VARCHAR(40) NOT NULL,
+  4  ModuleDescription VARCHAR(100) NOT NULL,
+  5  Module_Credit NUMBER(3) NOT NULL,
+  6  Module_Year NUMBER(4) NOT NULL
+  7  );
+
+Table created.
+
+SQL> CREATE TABLE Teacher (
+  2  Teacher_id NUMBER(10) PRIMARY KEY,
+  3  TeacherName VARCHAR(40) NOT NULL,
+  4  TeacherEmail VARCHAR(60) UNIQUE,
+  5  Teacher_Department VARCHAR(40) NOT NULL,
+  6  Years_of_Experience NUMBER(5) NOT NULL
+  7  );
+
+Table created.
+
+SQL> CREATE TABLE Assessment (
+  2  Assessment_id NUMBER(10) PRIMARY KEY,
+  3  AssessmentName VARCHAR(50) NOT NULL,
+  4  Deadline DATE NOT NULL,
+  5  Weightage NUMBER(5) NOT NULL,
+  6  Assessment_Marks NUMBER(5) NOT NULL
+  7  );
+
+Table created.
+
+SQL> CREATE TABLE Result (
+  2  Result_id NUMBER(10) PRIMARY KEY,
+  3  Assessment_id NUMBER(3),
+  4  Total_Marks NUMBER(5) NOT NULL,
+  5  Result_Status VARCHAR(20) NOT NULL,
+  6  Result_Type VARCHAR(20) NOT NULL,
+  7  FOREIGN KEY (Assessment_id) REFERENCES Assessment(Assessment_id)
+  8  );
+
+Table created.
+
+
+SQL> CREATE TABLE Resources (
+  2  Resource_id NUMBER(10) PRIMARY KEY,
+  3  Resource_Type VARCHAR(30) NOT NULL,
+  4  Resource_Duration NUMBER(4) NOT NULL,
+  5  Resource_Description VARCHAR(255) NOT NULL,
+  6  Resource_Availability VARCHAR(20) NOT NULL
+  7  );
+
+Table created.
+
+SQL> CREATE TABLE Announcement (
+  2  Announcement_id NUMBER(10) PRIMARY KEY,
+  3  Announcement_Title VARCHAR(40) NOT NULL,
+  4  Announcement_Message VARCHAR(100) NOT NULL,
+  5  Announcement_Date DATE NOT NULL,
+  6  Anouncement_Status VARCHAR(20) NOT NULL
+  7  );
+
+Table created.
+
+SQL> CREATE TABLE Student_Module (
+  2  Student_id NUMBER(10),
+  3  Module_id NUMBER(10),
+  4  PRIMARY KEY (Student_id, Module_id),
+  5  FOREIGN KEY (Student_id) REFERENCES Student(Student_id),
+  6  FOREIGN KEY (Module_id) REFERENCES Module(Module_id)
+  7  );
+
+Table created.
+
+SQL> CREATE TABLE Student_Module_Assessment (
+  2  Student_id NUMBER(10),
+  3  Module_id NUMBER(10),
+  4  Assessment_id NUMBER(10),
+  5  ObtainedMarks NUMBER(3) NOT NULL,
+  6  Result_date DATE NOT NULL,
+  7  PRIMARY KEY (Student_id, Module_id, Assessment_id),
+  8  FOREIGN KEY (Student_id) REFERENCES Student(Student_id),
+  9  FOREIGN KEY (Module_id) REFERENCES Module(Module_id),
+ 10  FOREIGN KEY (Assessment_id) REFERENCES Assessment(Assessment_id)
+ 11  );
+
+Table created.
+
+SQL> CREATE TABLE Student_Module_Resource (
+  2  Student_id NUMBER(10),
+  3  Module_id NUMBER(10),
+  4  Resource_id NUMBER(10),
+  5  ResourceCompletion VARCHAR(30) NOT NULL,
+  6  PRIMARY KEY (Student_id, Module_id, Resource_id),
+  7  FOREIGN KEY (Student_id) REFERENCES Student(Student_id),
+  8  FOREIGN KEY (Module_id) REFERENCES Module(Module_id),
+  9  FOREIGN KEY (Resource_id) REFERENCES Resources(Resource_id)
+ 10  );
+
+Table created.
+
+
+SQL> CREATE TABLE Student_Module_Teacher (
+  2  Student_id NUMBER(10),
+  3  Module_id NUMBER(10),
+  4  Teacher_id NUMBER(10),
+  5  PRIMARY KEY (Student_id, Module_id, Teacher_id),
+  6  FOREIGN KEY (Student_id) REFERENCES Student(Student_id),
+  7  FOREIGN KEY (Module_id) REFERENCES Module(Module_id),
+  8  FOREIGN KEY (Teacher_id) REFERENCES Teacher(Teacher_id)
+  9  );
+
+Table created.
+SQL> CREATE TABLE Student_Mod_Teacher_Announce (
+  2  Student_id NUMBER(10),
+  3  Module_id NUMBER(10),
+  4  Teacher_id NUMBER(10),
+  5  Announcement_id NUMBER(10),
+  6  PRIMARY KEY (Student_id, Module_id, Teacher_id, Announcement_id),
+  7  FOREIGN KEY (Student_id) REFERENCES Student(Student_id),
+  8  FOREIGN KEY (Module_id) REFERENCES Module(Module_id),
+  9  FOREIGN KEY (Teacher_id) REFERENCES Teacher(Teacher_id),
+ 10  FOREIGN KEY (Announcement_id) REFERENCES Announcement(Announcement_id)
+ 11  );
+
+Table created.

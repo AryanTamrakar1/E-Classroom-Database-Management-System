@@ -1,0 +1,586 @@
+SQL> INSERT INTO Program (Program_id, ProgramName, ProgramDescription, ProgramDuration, Program_Year)
+  2  VALUES (101, 'Software Engineering', 'BSc in Software Engineering', 3, 2025);
+
+1 row created.
+
+SQL>
+SQL> INSERT INTO Program (Program_id, ProgramName, ProgramDescription, ProgramDuration, Program_Year)
+  2  VALUES (102, 'Information Technology', 'BSc in IT', 4, 2024);
+
+1 row created.
+
+SQL>
+SQL> INSERT INTO Program (Program_id, ProgramName, ProgramDescription, ProgramDuration, Program_Year)
+  2  VALUES (103, 'Artificial Intelligence', 'BSc in AI', 3, 2023);
+
+1 row created.
+
+SQL>
+SQL> INSERT INTO Program (Program_id, ProgramName, ProgramDescription, ProgramDuration, Program_Year)
+  2  VALUES (104, 'Data Science', 'BSc in Data Science', 4, 2026);
+
+1 row created.
+
+SQL>
+SQL> INSERT INTO Program (Program_id, ProgramName, ProgramDescription, ProgramDuration, Program_Year)
+  2  VALUES (105, 'Cyber Security', 'BSc in Cyber Security', 3, 2024);
+
+1 row created.
+
+SQL>
+SQL> INSERT INTO Program (Program_id, ProgramName, ProgramDescription, ProgramDuration, Program_Year)
+  2  VALUES (106, 'Business Computing', 'BSc in Business Computing', 3, 2027);
+
+1 row created.
+
+SQL>
+SQL> INSERT INTO Program (Program_id, ProgramName, ProgramDescription, ProgramDuration, Program_Year)
+  2  VALUES (107, 'Computer Science', 'BSc in Computer Science', 3, 2025);
+
+1 row created.
+
+SQL>
+SQL> COMMIT;
+
+Commit complete.
+
+SQL> INSERT INTO Student (Student_id, Program_id, Student_Name, Student_Number, Student_Email, Date_of_Birth)
+  2  VALUES (201, 101, 'Emily Johnson', 20156701, 'emily.johnson@gmail.com', TO_DATE('2002-05-15', 'YYYY-MM-DD'));
+
+1 row created.
+
+SQL>
+SQL> INSERT INTO Student (Student_id, Program_id, Student_Name, Student_Number, Student_Email, Date_of_Birth)
+  2  VALUES (202, 102, 'Daniel Smith', 20145902, 'daniel.smith@gmail.com', TO_DATE('2003-05-21', 'YYYY-MM-DD'));
+
+1 row created.
+
+SQL>
+SQL> INSERT INTO Student (Student_id, Program_id, Student_Name, Student_Number, Student_Email, Date_of_Birth)
+  2  VALUES (203, 103, 'Sophia Williams', 20172652, 'sophia.williams@gmail.com', TO_DATE('2001-08-14', 'YYYY-MM-DD'));
+
+1 row created.
+
+SQL>
+SQL> INSERT INTO Student (Student_id, Program_id, Student_Name, Student_Number, Student_Email, Date_of_Birth)
+  2  VALUES (204, 104, 'Michael Brown', 20174564, 'michael.brown@gmail.com', TO_DATE('2000-12-12', 'YYYY-MM-DD'));
+
+1 row created.
+
+SQL>
+SQL> INSERT INTO Student (Student_id, Program_id, Student_Name, Student_Number, Student_Email, Date_of_Birth)
+  2  VALUES (205, 105, 'John Davis', 201034565, 'isabella.davis@gmail.com', TO_DATE('2002-03-25', 'YYYY-MM-DD'));
+
+1 row created.
+
+SQL>
+SQL> INSERT INTO Student (Student_id, Program_id, Student_Name, Student_Number, Student_Email, Date_of_Birth)
+  2  VALUES (206, 106, 'James Quinn', 20170806, 'james.moore@gmail.com', TO_DATE('2000-06-30', 'YYYY-MM-DD'));
+
+1 row created.
+
+SQL>
+SQL> INSERT INTO Student (Student_id, Program_id, Student_Name, Student_Number, Student_Email, Date_of_Birth)
+  2  VALUES (207, 107, 'Lily Clark', 20150907, 'lily.clark@gmail.com', TO_DATE('2003-07-19', 'YYYY-MM-DD'));
+
+1 row created.
+
+SQL> COMMIT;
+
+Commit complete.
+
+SQL>
+
+SQL> INSERT INTO Module (Module_id, ModuleName, ModuleDescription, Module_Credit, Module_Year)
+  2  VALUES (302, 'Database Systems', 'Study of Relational Databases', 4, 2024);
+
+1 row created.
+
+SQL>
+SQL> INSERT INTO Module (Module_id, ModuleName, ModuleDescription, Module_Credit, Module_Year)
+  2  VALUES (303, 'Artificial Intelligence', 'Introduction to AI concepts', 5, 2023);
+
+1 row created.
+
+SQL>
+SQL> INSERT INTO Module (Module_id, ModuleName, ModuleDescription, Module_Credit, Module_Year)
+  2  VALUES (304, 'Machine Learning', 'Study of Machine Learning', 6, 2026);
+
+1 row created.
+
+SQL>
+SQL> INSERT INTO Module (Module_id, ModuleName, ModuleDescription, Module_Credit, Module_Year)
+  2  VALUES (305, 'Cyber Security Basics', 'Introduction to Cyber Security', 4, 2024);
+
+1 row created.
+
+SQL>
+SQL> INSERT INTO Module (Module_id, ModuleName, ModuleDescription, Module_Credit, Module_Year)
+  2  VALUES (306, 'Cloud Computing', 'Overview of Cloud Services', 5, 2027);
+
+1 row created.
+
+SQL>
+SQL> INSERT INTO Module (Module_id, ModuleName, ModuleDescription, Module_Credit, Module_Year)
+  2  VALUES (307, 'Operating Systems', 'Understanding Operating Systems', 5, 2025);
+
+1 row created.
+
+SQL>
+SQL> COMMIT;
+
+Commit complete.
+
+SQL>
+SQL> INSERT INTO Teacher (Teacher_id, TeacherName, TeacherEmail, Teacher_Department, Years_of_Experience)
+  2  VALUES (401, 'David Clark', 'david.clark@gmail.com', 'Software Engineering', 10);
+
+1 row created.
+
+SQL>
+SQL> INSERT INTO Teacher (Teacher_id, TeacherName, TeacherEmail, Teacher_Department, Years_of_Experience)
+  2  VALUES (402, 'Sarah Johnson', 'sarah.johnson@gmail.com', 'Information Technology', 7);
+
+1 row created.
+
+SQL>
+SQL> INSERT INTO Teacher (Teacher_id, TeacherName, TeacherEmail, Teacher_Department, Years_of_Experience)
+  2  VALUES (403, 'Michael Lee', 'michael.lee@gmail.com', 'Artificial Intelligence', 12);
+
+1 row created.
+
+SQL>
+SQL> INSERT INTO Teacher (Teacher_id, TeacherName, TeacherEmail, Teacher_Department, Years_of_Experience)
+  2  VALUES (404, 'Tony Stark', 'tony.stark@gmail.com', 'Data Science', 5);
+
+1 row created.
+
+SQL>
+SQL> INSERT INTO Teacher (Teacher_id, TeacherName, TeacherEmail, Teacher_Department, Years_of_Experience)
+  2  VALUES (405, 'James White', 'james.white@gmail.com', 'Cyber Security', 8);
+
+1 row created.
+
+SQL>
+SQL> INSERT INTO Teacher (Teacher_id, TeacherName, TeacherEmail, Teacher_Department, Years_of_Experience)
+  2  VALUES (406, 'Emma Scott', 'emma.scott@gmail.com', 'Business Computing', 6);
+
+1 row created.
+
+SQL>
+SQL> INSERT INTO Teacher (Teacher_id, TeacherName, TeacherEmail, Teacher_Department, Years_of_Experience)
+  2  VALUES (407, 'Robert Green', 'robert.green@gmail.com', 'Computer Science', 9);
+
+1 row created.
+
+SQL>
+SQL> COMMIT;
+
+Commit complete.
+
+SQL>
+SQL> INSERT INTO Assessment (Assessment_id, AssessmentName, Deadline, Weightage, Assessment_Marks)
+  2  VALUES (502, 'IT Basics Exam', TO_DATE('2024-06-20', 'YYYY-MM-DD'), 40, 100);
+
+1 row created.
+
+SQL>
+SQL> INSERT INTO Assessment (Assessment_id, AssessmentName, Deadline, Weightage, Assessment_Marks)
+  2  VALUES (503, 'AI Research Paper', TO_DATE('2023-11-10', 'YYYY-MM-DD'), 30, 100);
+
+1 row created.
+
+SQL>
+SQL> INSERT INTO Assessment (Assessment_id, AssessmentName, Deadline, Weightage, Assessment_Marks)
+  2  VALUES (504, 'Data Science Project', TO_DATE('2026-05-25', 'YYYY-MM-DD'), 60, 100);
+
+1 row created.
+
+SQL>
+SQL> INSERT INTO Assessment (Assessment_id, AssessmentName, Deadline, Weightage, Assessment_Marks)
+  2  VALUES (505, 'Cybersecurity Midterm', TO_DATE('2024-04-05', 'YYYY-MM-DD'), 50, 100);
+
+1 row created.
+
+SQL>
+SQL> INSERT INTO Assessment (Assessment_id, AssessmentName, Deadline, Weightage, Assessment_Marks)
+  2  VALUES (506, 'Business Computing Report', TO_DATE('2027-07-15', 'YYYY-MM-DD'), 40, 100);
+
+1 row created.
+
+SQL>
+SQL> INSERT INTO Assessment (Assessment_id, AssessmentName, Deadline, Weightage, Assessment_Marks)
+  2  VALUES (507, 'Computer Science Final', TO_DATE('2025-05-30', 'YYYY-MM-DD'), 50, 100);
+
+1 row created.
+
+SQL>
+SQL> COMMIT;
+
+Commit complete.
+
+SQL>
+SQL> INSERT INTO Result (Result_id, Assessment_id, Total_Marks, Result_Status, Result_Type)
+  2  VALUES (601, 501, 85, 'Pass', 'Final Exam');
+
+1 row created.
+
+SQL>
+SQL> INSERT INTO Result (Result_id, Assessment_id, Total_Marks, Result_Status, Result_Type)
+  2  VALUES (602, 502, 70, 'Pass', 'Final Exam');
+
+1 row created.
+
+SQL>
+SQL> INSERT INTO Result (Result_id, Assessment_id, Total_Marks, Result_Status, Result_Type)
+  2  VALUES (603, 503, 98, 'Pass', 'Research Paper');
+
+1 row created.
+
+SQL>
+SQL> INSERT INTO Result (Result_id, Assessment_id, Total_Marks, Result_Status, Result_Type)
+  2  VALUES (604, 504, 38, 'Fail', 'Project');
+
+1 row created.
+
+SQL>
+SQL> INSERT INTO Result (Result_id, Assessment_id, Total_Marks, Result_Status, Result_Type)
+  2  VALUES (605, 505, 39, 'Fail', 'Midterm');
+
+1 row created.
+
+SQL>
+SQL> INSERT INTO Result (Result_id, Assessment_id, Total_Marks, Result_Status, Result_Type)
+  2  VALUES (606, 506, 80, 'Pass', 'Report');
+
+1 row created.
+
+SQL>
+SQL> INSERT INTO Result (Result_id, Assessment_id, Total_Marks, Result_Status, Result_Type)
+  2  VALUES (607, 507, 35, 'Fail', 'Final Exam');
+
+1 row created.
+
+SQL>
+SQL> COMMIT;
+
+Commit complete.
+
+SQL>
+SQL> INSERT INTO Resources (Resource_id, Resource_Type, Resource_Duration, Resource_Description, Resource_Availability)
+  2  VALUES (701, 'Video', 120, 'Introduction to Software Engineering concepts', 'Available');
+
+1 row created.
+
+SQL>
+SQL> INSERT INTO Resources (Resource_id, Resource_Type, Resource_Duration, Resource_Description, Resource_Availability)
+  2  VALUES (702, 'Document', 50, 'IT Fundamentals guide', 'Available');
+
+1 row created.
+
+SQL>
+SQL> INSERT INTO Resources (Resource_id, Resource_Type, Resource_Duration, Resource_Description, Resource_Availability)
+  2  VALUES (703, 'Lecture Notes', 90, 'Introduction to AI concepts', 'Available');
+
+1 row created.
+
+SQL>
+SQL> INSERT INTO Resources (Resource_id, Resource_Type, Resource_Duration, Resource_Description, Resource_Availability)
+  2  VALUES (704, 'Book', 300, 'Data Science guidebook', 'Available');
+
+1 row created.
+
+SQL>
+SQL> INSERT INTO Resources (Resource_id, Resource_Type, Resource_Duration, Resource_Description, Resource_Availability)
+  2  VALUES (705, 'Online Course', 180, 'Cybersecurity Courses', 'Unavailable');
+
+1 row created.
+
+SQL>
+SQL> INSERT INTO Resources (Resource_id, Resource_Type, Resource_Duration, Resource_Description, Resource_Availability)
+  2  VALUES (706, 'Tutorial', 60, 'Introduction to Business Computing', 'Available');
+
+1 row created.
+
+SQL>
+SQL> INSERT INTO Resources (Resource_id, Resource_Type, Resource_Duration, Resource_Description, Resource_Availability)
+  2  VALUES (707, 'Project Guide', 45, 'Final project submission guidelines', 'Available');
+
+1 row created.
+
+SQL>
+SQL> COMMIT;
+
+Commit complete.
+
+SQL>
+SQL> INSERT INTO Announcement (Announcement_id, Announcement_Title, Announcement_Message, Announcement_Date, Announcement_Status)
+  2  VALUES (801, 'Software Engineering Exam', 'Final exam announcement for Software Engineering', TO_DATE('2025-06-01', 'YYYY-MM-DD'), 'Active');
+
+1 row created.
+
+SQL>
+SQL> INSERT INTO Announcement (Announcement_id, Announcement_Title, Announcement_Message, Announcement_Date, Announcement_Status)
+  2  VALUES (802, 'Database Systems Exam', 'Exam schedule for Database Systems', TO_DATE('2024-06-01', 'YYYY-MM-DD'), 'Active');
+
+1 row created.
+
+SQL>
+SQL> INSERT INTO Announcement (Announcement_id, Announcement_Title, Announcement_Message, Announcement_Date, Announcement_Status)
+  2  VALUES (803, 'AI Research Paper Submission', 'Deadline for AI Research Paper', TO_DATE('2023-11-05', 'YYYY-MM-DD'), 'Expired');
+
+1 row created.
+
+SQL>
+SQL> INSERT INTO Announcement (Announcement_id, Announcement_Title, Announcement_Message, Announcement_Date, Announcement_Status)
+  2  VALUES (804, 'Data Science Project Deadline', 'Reminder for Data Science Project Deadline', TO_DATE('2024-05-10', 'YYYY-MM-DD'), 'Active');
+
+1 row created.
+
+SQL>
+SQL> INSERT INTO Announcement (Announcement_id, Announcement_Title, Announcement_Message, Announcement_Date, Announcement_Status)
+  2  VALUES (805, 'Cyber Security Midterm', 'Important notes for Cyber Security midterm exam', TO_DATE('2024-04-01', 'YYYY-MM-DD'), 'Expired');
+
+1 row created.
+
+SQL>
+SQL> INSERT INTO Announcement (Announcement_id, Announcement_Title, Announcement_Message, Announcement_Date, Announcement_Status)
+  2  VALUES (806, 'Business Computing Report', 'Business Computing submission guidelines', TO_DATE('2027-07-10', 'YYYY-MM-DD'), 'Expired');
+
+1 row created.
+
+SQL>
+SQL> INSERT INTO Announcement (Announcement_id, Announcement_Title, Announcement_Message, Announcement_Date, Announcement_Status)
+  2  VALUES (807, 'Computer Science Final Exam', 'Final exam schedule for Computer Science', TO_DATE('2024-05-25', 'YYYY-MM-DD'), 'Active');
+
+1 row created.
+
+SQL>
+SQL> COMMIT;
+
+Commit complete.
+SQL> INSERT INTO Student_Module (Student_id, Module_id)
+  2  VALUES (201, 301);
+
+1 row created.
+
+SQL>
+SQL> INSERT INTO Student_Module (Student_id, Module_id)
+  2  VALUES (202, 302);
+
+1 row created.
+
+SQL>
+SQL> INSERT INTO Student_Module (Student_id, Module_id)
+  2  VALUES (203, 303);
+
+1 row created.
+
+SQL>
+SQL> INSERT INTO Student_Module (Student_id, Module_id)
+  2  VALUES (204, 304);
+
+1 row created.
+
+SQL>
+SQL> INSERT INTO Student_Module (Student_id, Module_id)
+  2  VALUES (205, 305);
+
+1 row created.
+
+SQL>
+SQL> INSERT INTO Student_Module (Student_id, Module_id)
+  2  VALUES (206, 306);
+
+1 row created.
+
+SQL>
+SQL> INSERT INTO Student_Module (Student_id, Module_id)
+  2  VALUES (207, 307);
+
+1 row created.
+
+SQL>
+SQL> COMMIT;
+
+Commit complete.
+SQL> INSERT INTO Student_Module_Assessment (Student_id, Module_id, Assessment_id, ObtainedMarks, Result_date)
+  2  VALUES (201, 301, 501, 85, TO_DATE('2025-06-16', 'YYYY-MM-DD'));
+
+1 row created.
+
+SQL>
+SQL> INSERT INTO Student_Module_Assessment (Student_id, Module_id, Assessment_id, ObtainedMarks, Result_date)
+  2  VALUES (202, 302, 502, 70, TO_DATE('2024-06-21', 'YYYY-MM-DD'));
+
+1 row created.
+
+SQL>
+SQL> INSERT INTO Student_Module_Assessment (Student_id, Module_id, Assessment_id, ObtainedMarks, Result_date)
+  2  VALUES (203, 303, 503, 98, TO_DATE('2023-11-11', 'YYYY-MM-DD'));
+
+1 row created.
+
+SQL>
+SQL> INSERT INTO Student_Module_Assessment (Student_id, Module_id, Assessment_id, ObtainedMarks, Result_date)
+  2  VALUES (204, 304, 504, 38, TO_DATE('2026-05-26', 'YYYY-MM-DD'));
+
+1 row created.
+
+SQL>
+SQL> INSERT INTO Student_Module_Assessment (Student_id, Module_id, Assessment_id, ObtainedMarks, Result_date)
+  2  VALUES (205, 305, 505, 39, TO_DATE('2024-04-06', 'YYYY-MM-DD'));
+
+1 row created.
+
+SQL>
+SQL> INSERT INTO Student_Module_Assessment (Student_id, Module_id, Assessment_id, ObtainedMarks, Result_date)
+  2  VALUES (206, 306, 506, 80, TO_DATE('2027-07-16', 'YYYY-MM-DD'));
+
+1 row created.
+
+SQL>
+SQL> INSERT INTO Student_Module_Assessment (Student_id, Module_id, Assessment_id, ObtainedMarks, Result_date)
+  2  VALUES (207, 307, 507, 35, TO_DATE('2025-05-31', 'YYYY-MM-DD'));
+
+1 row created.
+
+SQL>
+SQL> COMMIT;
+
+Commit complete.
+SQL> INSERT INTO Student_Module_Resource (Student_id, Module_id, Resource_id, ResourceCompletion)
+  2  VALUES (201, 301, 701, 'Completed');
+
+1 row created.
+
+SQL>
+SQL> INSERT INTO Student_Module_Resource (Student_id, Module_id, Resource_id, ResourceCompletion)
+  2  VALUES (202, 302, 702, 'In Progress');
+
+1 row created.
+
+SQL>
+SQL> INSERT INTO Student_Module_Resource (Student_id, Module_id, Resource_id, ResourceCompletion)
+  2  VALUES (203, 303, 703, 'Not Started');
+
+1 row created.
+
+SQL>
+SQL> INSERT INTO Student_Module_Resource (Student_id, Module_id, Resource_id, ResourceCompletion)
+  2  VALUES (204, 304, 704, 'Completed');
+
+1 row created.
+
+SQL>
+SQL> INSERT INTO Student_Module_Resource (Student_id, Module_id, Resource_id, ResourceCompletion)
+  2  VALUES (205, 305, 705, 'In Progress');
+
+1 row created.
+
+SQL>
+SQL> INSERT INTO Student_Module_Resource (Student_id, Module_id, Resource_id, ResourceCompletion)
+  2  VALUES (206, 306, 706, 'Completed');
+
+1 row created.
+
+SQL>
+SQL> INSERT INTO Student_Module_Resource (Student_id, Module_id, Resource_id, ResourceCompletion)
+  2  VALUES (207, 307, 707, 'Not Started');
+
+1 row created.
+
+SQL>
+SQL> COMMIT;
+
+Commit complete.
+SQL> INSERT INTO Student_Module_Teacher (Student_id, Module_id, Teacher_id)
+  2  VALUES (201, 301, 401);
+
+1 row created.
+
+SQL>
+SQL> INSERT INTO Student_Module_Teacher (Student_id, Module_id, Teacher_id)
+  2  VALUES (202, 302, 402);
+
+1 row created.
+
+SQL>
+SQL> INSERT INTO Student_Module_Teacher (Student_id, Module_id, Teacher_id)
+  2  VALUES (203, 303, 403);
+
+1 row created.
+
+SQL>
+SQL> INSERT INTO Student_Module_Teacher (Student_id, Module_id, Teacher_id)
+  2  VALUES (204, 304, 404);
+
+1 row created.
+
+SQL>
+SQL> INSERT INTO Student_Module_Teacher (Student_id, Module_id, Teacher_id)
+  2  VALUES (205, 305, 405);
+
+1 row created.
+
+SQL>
+SQL> INSERT INTO Student_Module_Teacher (Student_id, Module_id, Teacher_id)
+  2  VALUES (206, 306, 406);
+
+1 row created.
+
+SQL>
+SQL> INSERT INTO Student_Module_Teacher (Student_id, Module_id, Teacher_id)
+  2  VALUES (207, 307, 407);
+
+1 row created.
+
+SQL>
+SQL> COMMIT;
+
+Commit complete.
+SQL> INSERT INTO Student_Mod_Teacher_Announce (Student_id, Module_id, Teacher_id, Announcement_id)
+  2  VALUES (201, 301, 401, 801);
+
+1 row created.
+
+SQL>
+SQL> INSERT INTO Student_Mod_Teacher_Announce (Student_id, Module_id, Teacher_id, Announcement_id)
+  2  VALUES (202, 302, 402, 802);
+
+1 row created.
+
+SQL>
+SQL> INSERT INTO Student_Mod_Teacher_Announce (Student_id, Module_id, Teacher_id, Announcement_id)
+  2  VALUES (203, 303, 403, 803);
+
+1 row created.
+
+SQL>
+SQL> INSERT INTO Student_Mod_Teacher_Announce (Student_id, Module_id, Teacher_id, Announcement_id)
+  2  VALUES (204, 304, 404, 804);
+
+1 row created.
+
+SQL>
+SQL> INSERT INTO Student_Mod_Teacher_Announce (Student_id, Module_id, Teacher_id, Announcement_id)
+  2  VALUES (205, 305, 405, 805);
+
+1 row created.
+
+SQL>
+SQL> INSERT INTO Student_Mod_Teacher_Announce (Student_id, Module_id, Teacher_id, Announcement_id)
+  2  VALUES (206, 306, 406, 806);
+
+1 row created.
+
+SQL>
+SQL> INSERT INTO Student_Mod_Teacher_Announce (Student_id, Module_id, Teacher_id, Announcement_id)
+  2  VALUES (207, 307, 407, 807);
+
+1 row created.
+
+SQL>
+SQL> COMMIT;
+
+Commit complete.

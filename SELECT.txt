@@ -1,0 +1,194 @@
+SQL> SELECT * FROM Program;
+
+PROGRAM_ID PROGRAMNAME                              PROGRAMDESCRIPTION                                                                                   PROGRAMDURATION PROGRAM_YEAR
+---------- ---------------------------------------- ---------------------------------------------------------------------------------------------------- --------------- ------------
+       101 Software Engineering                     BSc in Software Engineering                                                                                        3         2025
+       102 Information Technology                   BSc in IT                                                                                                          4         2024
+       103 Artificial Intelligence                  BSc in AI                                                                                                          3         2023
+       104 Data Science                             BSc in Data Science                                                                                                4         2026
+       105 Cyber Security                           BSc in Cyber Security                                                                                              3         2024
+       106 Business Computing                       BSc in Business Computing                                                                                          3         2027
+       107 Computer Science                         BSc in Computer Science                                                                                            3         2025
+
+7 rows selected.
+
+SQL> SELECT * FROM Student;
+
+STUDENT_ID PROGRAM_ID STUDENT_NAME                                                 STUDENT_NUMBER STUDENT_EMAIL                                      DATE_OF_B
+---------- ---------- ------------------------------------------------------------ -------------- -------------------------------------------------- ---------
+       201        101 Emily Johnson                                                      20156701 emily.johnson@gmail.com                            15-MAY-02
+       202        102 Daniel Smith                                                       20145902 daniel.smith@gmail.com                             21-MAY-03
+       203        103 Sophia Williams                                                    20172652 sophia.williams@gmail.com                          14-AUG-01
+       204        104 Michael Brown                                                      20174564 michael.brown@gmail.com                            12-DEC-00
+       205        105 John Davis                                                        201034565 isabella.davis@gmail.com                           25-MAR-02
+       206        106 James Quinn                                                        20170806 james.moore@gmail.com                              30-JUN-00
+       207        107 Lily Clark                                                         20150907 lily.clark@gmail.com                               19-JUL-03
+
+7 rows selected.
+
+SQL> SELECT * FROM Module;
+
+ MODULE_ID MODULENAME                               MODULEDESCRIPTION                                                                                    MODULE_CREDIT MODULE_YEAR
+---------- ---------------------------------------- ---------------------------------------------------------------------------------------------------- ------------- -----------
+       301 Software Development                     Study of Software Development                                                                                    5        2025
+       302 Database Systems                         Study of Relational Databases                                                                                    4        2024
+       303 Artificial Intelligence                  Introduction to AI concepts                                                                                      5        2023
+       304 Machine Learning                         Study of Machine Learning                                                                                        6        2026
+       305 Cyber Security Basics                    Introduction to Cyber Security                                                                                   4        2024
+       306 Cloud Computing                          Overview of Cloud Services                                                                                       5        2027
+       307 Operating Systems                        Understanding Operating Systems                                                                                  5        2025
+
+7 rows selected.
+SQL> SELECT * FROM Teacher;
+
+TEACHER_ID TEACHERNAME                              TEACHEREMAIL                                                 TEACHER_DEPARTMENT                       YEARS_OF_EXPERIENCE
+---------- ---------------------------------------- ------------------------------------------------------------ ---------------------------------------- -------------------
+       401 David Clark                              david.clark@gmail.com                                        Software Engineering                                      10
+       402 Sarah Johnson                            sarah.johnson@gmail.com                                      Information Technology                                     7
+       403 Michael Lee                              michael.lee@gmail.com                                        Artificial Intelligence                                   12
+       404 Tony Stark                               tony.stark@gmail.com                                         Data Science                                               5
+       405 James White                              james.white@gmail.com                                        Cyber Security                                             8
+       406 Emma Scott                               emma.scott@gmail.com                                         Business Computing                                         6
+       407 Robert Green                             robert.green@gmail.com                                       Computer Science                                           9
+
+7 rows selected.
+
+SQL> SELECT * FROM Assessment;
+
+ASSESSMENT_ID ASSESSMENTNAME                                     DEADLINE   WEIGHTAGE ASSESSMENT_MARKS
+------------- -------------------------------------------------- --------- ---------- ----------------
+          501 Software Engineering Exam                          15-JUN-25         50              100
+          502 IT Basics Exam                                     20-JUN-24         40              100
+          503 AI Research Paper                                  10-NOV-23         30              100
+          504 Data Science Project                               25-MAY-26         60              100
+          505 Cybersecurity Midterm                              05-APR-24         50              100
+          506 Business Computing Report                          15-JUL-27         40              100
+          507 Computer Science Final                             30-MAY-25         50              100
+
+7 rows selected.
+
+SQL> SELECT * FROM Result;
+
+ RESULT_ID ASSESSMENT_ID TOTAL_MARKS RESULT_STATUS        RESULT_TYPE
+---------- ------------- ----------- -------------------- --------------------
+       601           501          85 Pass                 Final Exam
+       602           502          70 Pass                 Final Exam
+       603           503          98 Pass                 Research Paper
+       604           504          38 Fail                 Project
+       605           505          39 Fail                 Midterm
+       606           506          80 Pass                 Report
+       607           507          35 Fail                 Final Exam
+
+7 rows selected.
+
+
+SQL> SELECT Resource_id, Resource_Type, Resource_Duration, Resource_Description FROM Resources;
+
+RESOURCE_ID RESOURCE_TYPE                  RESOURCE_DURATION RESOURCE_DESCRIPTION
+----------- ------------------------------ ----------------- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+        701 Video                                        120 Introduction to Software Engineering concepts
+        702 Document                                      50 IT Fundamentals guide
+        703 Lecture Notes                                 90 Introduction to AI concepts
+        704 Book                                         300 Data Science guidebook
+        705 Online Course                                180 Cybersecurity Courses
+        706 Tutorial                                      60 Introduction to Business Computing
+        707 Project Guide                                 45 Final project submission guidelines
+
+7 rows selected.
+
+SQL> SELECT Resource_Availability FROM Resources;
+
+RESOURCE_AVAILABILIT
+--------------------
+Available
+Available
+Available
+Available
+Unavailable
+Available
+Available
+
+7 rows selected.
+
+SQL> SELECT * FROM Announcement;
+ANNOUNCEMENT_ID ANNOUNCEMENT_TITLE                       ANNOUNCEMENT_MESSAGE                                                                                 ANNOUNCEM ANNOUNCEMENT_STATUS
+--------------- ---------------------------------------- ---------------------------------------------------------------------------------------------------- --------- --------------------
+            801 Software Engineering Exam                Final exam announcement for Software Engineering                                                     01-JUN-25 Active
+            802 Database Systems Exam                    Exam schedule for Database Systems                                                                   01-JUN-24 Active
+            803 AI Research Paper Submission             Deadline for AI Research Paper                                                                       05-NOV-23 Expired
+            804 Data Science Project Deadline            Reminder for Data Science Project Deadline                                                           10-MAY-24 Active
+            805 Cyber Security Midterm                   Important notes for Cyber Security midterm exam                                                      01-APR-24 Expired
+            806 Business Computing Report                Business Computing submission guidelines                                                             10-JUL-27 Expired
+            807 Computer Science Final Exam              Final exam schedule for Computer Science                                                             25-MAY-24 Active
+
+7 rows selected.
+
+SQL> SELECT * FROM Student_Module;
+
+STUDENT_ID  MODULE_ID
+---------- ----------
+       201        301
+       202        302
+       203        303
+       204        304
+       205        305
+       206        306
+       207        307
+
+7 rows selected.
+
+SQL> SELECT * FROM Student_Module_Teacher;
+
+STUDENT_ID  MODULE_ID TEACHER_ID
+---------- ---------- ----------
+       201        301        401
+       202        302        402
+       203        303        403
+       204        304        404
+       205        305        405
+       206        306        406
+       207        307        407
+
+7 rows selected.
+
+SQL> SELECT * FROM Student_Module_Resource;
+
+STUDENT_ID  MODULE_ID RESOURCE_ID RESOURCECOMPLETION
+---------- ---------- ----------- ------------------------------
+       201        301         701 Completed
+       202        302         702 In Progress
+       203        303         703 Not Started
+       204        304         704 Completed
+       205        305         705 In Progress
+       206        306         706 Completed
+       207        307         707 Not Started
+
+7 rows selected.
+
+SQL> SELECT * FROM Student_Module_Assessment;
+
+STUDENT_ID  MODULE_ID ASSESSMENT_ID OBTAINEDMARKS RESULT_DA
+---------- ---------- ------------- ------------- ---------
+       201        301           501            85 16-JUN-25
+       202        302           502            70 21-JUN-24
+       203        303           503            98 11-NOV-23
+       204        304           504            38 26-MAY-26
+       205        305           505            39 06-APR-24
+       206        306           506            80 16-JUL-27
+       207        307           507            35 31-MAY-25
+
+7 rows selected.
+
+SQL> SELECT * FROM Student_Mod_Teacher_Announce;
+
+STUDENT_ID  MODULE_ID TEACHER_ID ANNOUNCEMENT_ID
+---------- ---------- ---------- ---------------
+       201        301        401             801
+       202        302        402             802
+       203        303        403             803
+       204        304        404             804
+       205        305        405             805
+       206        306        406             806
+       207        307        407             807
+
+7 rows selected.

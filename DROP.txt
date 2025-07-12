@@ -1,0 +1,51 @@
+SQL> DROP TABLE Student;
+
+Table dropped.
+
+SQL> DROP TABLE Program;
+
+Table dropped.
+
+SQL> DROP TABLE Module;
+
+Table dropped.
+
+SQL> DROP TABLE Teacher;
+
+Table dropped.
+
+SQL> DROP TABLE Resources;
+
+Table dropped.
+
+SQL> DROP TABLE Result;
+
+Table dropped.
+
+SQL> DROP TABLE Assessment;
+
+Table dropped.
+
+SQL> DROP TABLE Announcement;
+
+Table dropped.
+
+SQL> DROP TABLE Student_Module;
+
+Table dropped.
+
+SQL> DROP TABLE Student_Module_Teacher;
+
+Table dropped.
+
+SQL> DROP TABLE Student_Module_Resource;
+
+Table dropped.
+
+SQL> DROP TABLE Student_Mod_Teacher_Announce;
+
+Table dropped.
+
+SQL> DROP TABLE Student_Module_Assessment;
+
+Table dropped.
